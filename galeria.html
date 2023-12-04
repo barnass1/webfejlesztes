@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galéria</title>
+    <meta name="author" content="Medve Barnabás">
+    <meta name="description" content="Olasz étterem">
+    <link rel="icon" type="image/x-icon" href="style/kepek/favicon.png">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <script src="script/reszp_galeria/jquery-3.7.1.min.js"></script>
+    <script src="script/reszp_galeria/galleria-1.6.1/dist/galleria.js"></script>
+    <script src="script/reszp_galeria/galleria-1.6.1/dist/themes/classic/galleria.classic.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#images').galleria(
+                width = 500,
+                height = 500
+            );
+        });
+    </script>
+    <style>
+        .galleria {
+            margin: auto;
+            width: 80vw;
+            height: 50vw;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav id="felso">
+            <ul>
+                <li class="menusavTop">
+                    <p class="top">Nyitvatartás: 11:00 - 23:00</p>
+                </li>
+                <li class="menusavTop">
+                    <p class="top">+ 36 1 123 4567</p>
+                </li>
+            </ul>
+        </nav>
+        <nav id="also">
+            <ul>
+                <li class="logo">
+                    <a href="beadando.html" class="dif"><span translate="no">Incantevole</span></a>
+                </li>
+                <li class="menusav">
+                    <a href="asztalf.html" class="mid">Asztalfoglalás</a>
+                </li>
+                <li class="menusav">
+                    <a href="menu.html" class="mid">Menü</a>
+                </li>
+
+                <li class="menusav">
+                    <a href="#" class="current">Galéria</a>
+                </li>
+                <li class="menusav">
+                    <a href="ajankartya.html" class="mid">Ajándékkártya</a>
+                <li class="menusav">
+                    <a href="nyermeny.html" class="mid">NYEREMÉNYJÁTÉK</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+    <div>
+        <h1 id="fokep">Galéria</h1>
+    </div>
+    <div class="galery">
+        <article id="images" class="galleria">
+            <img src="script/reszp_galeria/fr/inside1.jpg" alt="Az étterem" title="Belső 1.">
+            <img src="script/reszp_galeria/fr/inside2.jpg" alt="Az étterem" title="Belső 2.">
+            <img src="script/reszp_galeria/fr/inside3.jpg" alt="Az étterem" title="Belső 3.">
+            <img src="script/reszp_galeria/fr/bruschetta.jpeg"
+                alt="Friss paradicsom, fokhagyma és bazsalikom a pirítós kenyéren."
+                title="Bruschetta al Pomodoro e Basilico">
+            <img src="script/reszp_galeria/fr/margareta.jpeg" alt="Paradicsomszósz, mozzarella, bazsalikom."
+                title="Margherita">
+            <img src="script/reszp_galeria/fr/carbonara.jpg"
+                alt="Füstölt szalonna, tojás, fekete bors és parmezán sajt a spagetti tetején."
+                title="Spaghetti Carbonara">
+            <img src="script/reszp_galeria/fr/spagetti.jpg" alt="Bolognai ragu spagetti tetején."
+                title="Spaghetti Bolognese">
+            <img src="script/reszp_galeria/fr/tiramisu.jpg"
+                alt="Kávéval átitatott piskótaszeletek és mascarpone krém rétegek." title="Tiramisu">
+            <img src="script/reszp_galeria/fr/pannacotta.jpg" alt="Vanília ízű tejszínpuding gyümölcsöntettel."
+                title="Panna Cotta">
+        </article>
+    </div>
+
+    <footer>
+        <ul class="foot">
+            <li>
+                <a href="https://facebook.com"><img src="style/kepek/Facebook_Logo_Secondary.png" alt="facebook logo"
+                        class="ikon"></a>
+            </li>
+            <li>
+                <a href="https://instagram.com"><img src="style/kepek/Instagram_Glyph_White.png" alt="instagram logo"
+                        class="ikon"></a>
+            </li>
+        </ul>
+        <p class="hely">1241, Budapest Liliom utca 50. </p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asztalfoglalás</title>
+    <meta name="author" content="Medve Barnabás">
+    <meta name="description" content="Olasz étterem">
+    <link rel="icon" type="image/x-icon" href="style/kepek/favicon.png">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <script src="script/form_validation/jquery-3.7.1.min.js"></script>
+    <script src="script/form_validation/jquery-validation-1/dist/jquery.validate.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#myForm").validate({
+                rules: {
+                    Nev: "required",
+                    Datum: "required",
+                    Foszama: "required",
+                    Ido: "required",
+                    Telefonszam: {
+                        required: true,
+                        minlength: 11,
+                        maxlength: 12,
+                    },
+                    Email: {
+                        required: true,
+                        email: true,
+                    },
+
+                },
+                messages: {
+                    Nev: "Kötelező",
+                    Datum: "Kötelező",
+                    Foszama: "Kötelező",
+                    Ido: "Kötelező",
+                    Telefonszam: {
+                        required: "Kötelező",
+                        minlength: "Túl rövid",
+                        maxlength: "Túl hosszú",
+                    },
+                    Email: {
+                        required: "Kötelező",
+                        email: "Emailt adj meg!",
+                    },
+                },
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav id="felso">
+            <ul>
+                <li class="menusavTop">
+                    <p class="top">Nyitvatartás: 11:00 - 23:00</p>
+                </li>
+                <li class="menusavTop">
+                    <p class="top">+ 36 1 123 4567</p>
+                </li>
+            </ul>
+        </nav>
+        <nav id="also">
+            <ul>
+                <li class="logo">
+                    <a href="beadando.html" class="dif"><span translate="no">Incantevole</span></a>
+                </li>
+                <li class="menusav">
+                    <a href="#" class="current">Asztalfoglalás</a>
+                </li>
+                <li class="menusav">
+                    <a href="menu.html" class="mid">Menü</a>
+                </li>
+                <li class="menusav">
+                    <a href="galeria.html" class="mid">Galéria</a>
+                </li>
+                <li class="menusav">
+                    <a href="ajankartya.html" class="mid">Ajándékkártya</a>
+                <li class="menusav">
+                    <a href="nyermeny.html" class="mid">NYEREMÉNYJÁTÉK</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+    <div>
+        <h1 id="fokep">Asztalfoglalás</h1>
+    </div>
+    <article>
+        <table>
+            <tr>
+                <td class="left1"></td>
+                <td class="open">
+                    <form name="myForm" id="myForm" method="post" action="http://szamtud.uni-corvinus.hu/receive.php"
+                        class="fogl" novalidate>
+                        <label for="Nev" class="aszinfo">Név:</label><br>
+                        <input type="text" name="Nev" class="mezo" id="Nev" placeholder="Vezetéknév Keresztnév"><br>
+                        <br>
+                        <label for="Datum" class="aszinfo">Dátum:</label><br>
+                        <input type="date" name="Datum" class="mezo" value="2023-12-31" id="Datum"><br>
+                        <br>
+                        <label for="Foszama" class="aszinfo">Fők száma:</label><br>
+                        <select name="Foszama" class="mezo" id="Foszama">
+                            <option disabled selected value>Válassz!</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                        </select><br>
+                        <br>
+                        <label for="Ido" class="aszinfo">Időpont:</label><br>
+                        <select name="Ido" class="mezo" id="Ido">
+                            <option disabled selected value>Válassz!</option>
+                            <option value="11:00">11:00</option>
+                            <option value="11:30">11:30</option>
+                            <option value="12:00">12:00</option>
+                            <option value="12:30">12:30</option>
+                            <option value="13:00">13:00</option>
+                            <option value="13:30">13:30</option>
+                            <option value="14:00">14:00</option>
+                            <option value="14:30">14:30</option>
+                            <option value="15:00">15:00</option>
+                            <option value="15:30">15:30</option>
+                            <option value="16:00">16:00</option>
+                            <option value="16:30">16:30</option>
+                            <option value="17:00">17:00</option>
+                            <option value="17:30">17:30</option>
+                            <option value="18:00">18:00</option>
+                            <option value="18:30">18:30</option>
+                            <option value="19:00">19:00</option>
+                            <option value="19:30">19:30</option>
+                            <option value="20:00">20:00</option>
+                            <option value="20:30">20:30</option>
+                            <option value="21:00">21:00</option>
+                            <option value="21:30">21:30</option>
+                        </select><br>
+                        <br>
+                        <label for="Email" class="aszinfo">Email:</label><br>
+                        <input type="email" class="mezo" name="Email" id="Email" placeholder="valaki@valami.hu"><br>
+                        <br>
+                        <label for="Telefonszam" class="aszinfo">Telefonszám:</label><br>
+                        <input type="tel" name="Telefonszam" class="mezo" id="Telefonszam"
+                            placeholder="+3620123456"><br>
+                        <br>
+                        <input type="submit" value="Küldés" class="submit0">
+                    </form>
+                </td>
+                <td class="right1"></td>
+            </tr>
+        </table>
+    </article>
+    <footer>
+        <ul class="foot">
+            <li>
+                <a href="https://facebook.com"><img src="style/kepek/Facebook_Logo_Secondary.png" alt="facebook logo"
+                        class="ikon"></a>
+            </li>
+            <li>
+                <a href="https://instagram.com"><img src="style/kepek/Instagram_Glyph_White.png" alt="instagram logo"
+                        class="ikon"></a>
+            </li>
+        </ul>
+        <p class="hely">1241, Budapest Liliom utca 50. </p>
+    </footer>
+</body>
+
+</html>
